@@ -4,13 +4,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
 // components
-import { Button } from "./components";
+import { Button, Nav } from "./components";
 import { theme } from "./Theme";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Nav />
       <Button type="secondary" title="title" strong={true} />
     </ThemeProvider>
   );
