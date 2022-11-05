@@ -8,16 +8,11 @@ import { Button } from "./components";
 import { theme } from "./Theme";
 
 function App() {
-  const dispatch = useDispatch();
-  // const theme = createTheme(useSelector((state) => state.theme.palette));
-
   return (
-    // <div className="App">
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Button />
+      <Button type="secondary" title="title" strong={true} />
     </ThemeProvider>
-    // </div>
   );
 }
 
