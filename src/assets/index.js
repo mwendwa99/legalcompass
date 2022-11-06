@@ -1,4 +1,2 @@
-export const assets = {
-  logo: require("./logo.png"),
-  icon: require("./icon.png"),
-};
+export { default as logo } from "./logo.png";
+export { default as icon } from "./icon.png";

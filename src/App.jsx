@@ -12,7 +12,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Nav />
-      <Button type="secondary" title="title" strong={true} />
     </ThemeProvider>
   );
 }

@@ -1,12 +1,34 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+}
+.MuiLink-root {
+  position: relative;
+  color: #484848;
+  font-size: 1.25rem;
+  text-decoration: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.MuiLink-root::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  background-color: #d9d9d9;
+}
+
+.MuiLink-root:hover:before {
+  width: 50%;
+}
+
+.MuiLink-root::before {
+  transition: width 0.35s;
 }

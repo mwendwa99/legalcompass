@@ -9,6 +9,17 @@ export const theme = createTheme({
         root: {
           // Some CSS
           borderRadius: 0,
+          textTransform: "capitalize",
+          fontWeight: "bolder",
+          fontSize: "18px",
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          // textDecorationThickness: "2px",
+          textDecoration: "none",
         },
       },
     },
@@ -35,28 +46,40 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: ' "lato",sans-serif',
-    fontSize: 16,
+    fontSize: 12,
     h1: {
-      fontSize: 48,
+      fontSize: 46,
       fontWeight: 700,
     },
     h2: {
       lineHeight: 1.17,
       fontWeight: 600,
-      fontSize: 30,
+      fontSize: 28,
     },
     h3: {
-      fontSize: 25,
+      fontSize: 23,
+      fontWeight: 600,
+    },
+    h4: {
+      fontSize: 20,
+      fontWeight: 600,
+    },
+    h5: {
+      fontSize: 18,
+      fontWeight: 600,
+    },
+    h6: {
+      fontSize: 16,
       fontWeight: 600,
     },
     subtitle1: {
-      fontSize: 24,
+      fontSize: 22,
     },
     subtitle2: {
-      fontSize: 20,
+      fontSize: 18,
     },
     button: {
-      fontSize: 24,
+      fontSize: 22,
     },
   },
 });
