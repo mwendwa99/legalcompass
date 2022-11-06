@@ -1,10 +1,8 @@
-import { useState } from "react";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
 // components
-import { Button, Nav } from "./components";
+import { Nav, Carousel } from "./components";
 import { theme } from "./Theme";
 
 function App() {
@@ -12,6 +10,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Nav />
+      <Carousel />
     </ThemeProvider>
   );
 }
