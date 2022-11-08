@@ -32,7 +32,7 @@ export default function Example(props) {
   ];
 
   return (
-    <Container maxWidth="xl" style={{ margin: "10rem 5rem 0 0" }}>
+    <Container maxWidth="lg" style={{ margin: "10rem 0 5rem 0" }}>
       <Carousel
         animation="slide"
         NextIcon={
@@ -76,7 +76,7 @@ function Item(props) {
           justifyContent: "right",
           alignContent: "flex-end",
           ml: { xs: 0, sm: 0, md: 40 },
-          mr: { xs: 0, sm: 0, md: 10 },
+          mr: { xs: 0, sm: 0, md: 15.7 },
           // height: 400,
         }}
       >
@@ -97,7 +97,7 @@ function Item(props) {
           item
           xs={12}
           sm={12}
-          md={6}
+          md={12}
           style={{ position: "absolute", bottom: 0, right: 0 }}
         >
           <CustomButton type="secondary" title="Learn More" strong={true} />
