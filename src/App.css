@@ -32,3 +32,11 @@
 .MuiLink-root::before {
   transition: width 0.35s;
 }
+/* .carousel {
+  display: none;
+} */
+@media screen and (max-width: 600px) {
+  .carouselBtn {
+    display: none;
+  }
+}

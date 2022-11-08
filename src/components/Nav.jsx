@@ -72,7 +72,7 @@ function DrawerAppBar(props) {
           <Box sx={{ flexGrow: 1 }}>
             <Tooltip title="Home">
               <IconButton sx={{ p: 0 }}>
-                <img src={logo} alt="logo" height={80} width={265} />
+                <img src={logo} alt="logo" height="100%" width="100%" />
               </IconButton>
             </Tooltip>
           </Box>
