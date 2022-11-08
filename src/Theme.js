@@ -34,6 +34,12 @@ export const theme = createTheme({
     secondary: {
       main: "#EABD09",
     },
+    grey: {
+      // light: '#ffa726',
+      main: "#726A6A",
+      // dark: '#ef6c00',
+      contrastText: "rgba(0, 0, 0, 0.87)",
+    },
     background: {
       default: "#01244C",
       paper: "#01244C",
@@ -77,7 +83,8 @@ export const theme = createTheme({
       fontWeight: 500,
     },
     subtitle2: {
-      fontSize: 16,
+      fontSize: 18,
+      fontWeight: 700,
     },
     button: {
       fontSize: 22,
