@@ -10,26 +10,47 @@ import CustomButton from "./Button";
 
 export default function Banner() {
   return (
-    // <Box>
-    <Box className="banner">
-      <Stack sx={{ p: 2 }} direction={"row"} spacing={2}>
-        <Typography variant="h1" color="grey" sx={{ width: "100%", p: 2 }}>
+    <Grid container sx={{ p: 2, mt: "5rem" }} className="banner">
+      <Grid item xs={12} sm={12} md={4}>
+        <Typography
+          align="center"
+          variant="h1"
+          component="h1"
+          color="grey"
+          sx={{ width: "100%", p: 2 }}
+        >
           united in <br /> vision & <br /> Mission
         </Typography>
-        <Divider flexItem orientation="vertical" />
-        <Stack direction="column" sx={{ p: 2 }}>
-          <Typography variant="subtitle2" sx={{ color: "#000" }} gutterBottom>
-            We are a non-profit organization that promotes public understanding
-            of Kenya's legal and judicial systems. We provide free legal advice
-            and help through the courts. We want Kenyans to know where they can
-            go to obtain justice.
-          </Typography>
-          <Box sx={{ mt: 2 }}>
-            <CustomButton title={"Get Involved"} />
-          </Box>
-        </Stack>
-      </Stack>
-    </Box>
-    // </Box>
+      </Grid>
+      <Divider variant="middle" flexItem orientation="vertical" />
+      <Grid item xs={12} sm={12} md={6}>
+        <Typography
+          variant="subtitle2"
+          paragraph
+          sx={{
+            color: "#000",
+            textAlign: { xs: "justify", sm: "justify", md: "justify" },
+            p: 2,
+            width: "100%",
+          }}
+          gutterBottom
+        >
+          We are a non-profit organization that promotes public understanding of
+          Kenya's legal and judicial systems. We provide free legal advice and
+          help through the courts. We want Kenyans to know where they can go to
+          obtain justice.
+        </Typography>
+        <Box
+          sx={{
+            mt: 4,
+            p: 2,
+            display: { xs: "flex" },
+            justifyContent: { xs: "center", md: "flex-start" },
+          }}
+        >
+          <CustomButton title={"Get Involved"} />
+        </Box>
+      </Grid>
+    </Grid>
   );
 }

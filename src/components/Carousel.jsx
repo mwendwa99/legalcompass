@@ -32,7 +32,7 @@ export default function Example(props) {
   ];
 
   return (
-    <Container maxWidth="lg" style={{ margin: "10rem 0 5rem 0" }}>
+    <Container maxWidth="lg" style={{ margin: "30rem 0 0 0" }}>
       <Carousel
         animation="slide"
         NextIcon={
@@ -76,8 +76,7 @@ function Item(props) {
           justifyContent: "right",
           alignContent: "flex-end",
           ml: { xs: 0, sm: 0, md: 40 },
-          mr: { xs: 0, sm: 0, md: 15.7 },
-          // height: 400,
+          mr: { xs: 0, sm: 0, md: 15 },
         }}
       >
         <Grid item xs={12} sm={12} md={12}>
@@ -85,8 +84,8 @@ function Item(props) {
             {props.item.name}
           </Typography>
           <Typography
-            sx={{ minHeight: 300 }}
-            variant="subtitle1"
+            sx={{ minHeight: 200 }}
+            variant="h5"
             align="justify"
             gutterBottom
           >
