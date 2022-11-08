@@ -48,7 +48,7 @@ export default function Example(props) {
         }
         navButtonsAlwaysVisible
         swipe
-        // className="carousel"
+        indicators={false}
         navButtonsProps={{
           // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
           style: {
@@ -85,7 +85,7 @@ function Item(props) {
             {props.item.name}
           </Typography>
           <Typography
-            sx={{ minHeight: 400 }}
+            sx={{ minHeight: 300 }}
             variant="subtitle1"
             align="justify"
             gutterBottom
