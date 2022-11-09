@@ -1,12 +1,7 @@
 #root {
   margin: 0;
   padding: 0;
-  background-image: url("./assets/background.png");
-  background-size: cover;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+
   position: relative;
   /* align evertything center */
   display: flex;
@@ -44,6 +39,20 @@
 @media screen and (max-width: 600px) {
   .carouselBtn {
     display: none;
+  }
+}
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .background {
+    /* display: none; */
+    height: 720px;
+    /* width: 100%; */
   }
 }
 .banner {

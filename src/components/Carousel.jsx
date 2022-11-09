@@ -32,7 +32,7 @@ export default function Example(props) {
   ];
 
   return (
-    <Container maxWidth="lg" style={{ margin: "30rem 0 0 0" }}>
+    <Container maxWidth="lg" style={{ margin: "10rem 0 0 0" }}>
       <Carousel
         animation="slide"
         NextIcon={
@@ -85,7 +85,7 @@ function Item(props) {
           </Typography>
           <Typography
             sx={{ minHeight: 200 }}
-            variant="h5"
+            variant="body1"
             align="justify"
             gutterBottom
           >
