@@ -67,7 +67,7 @@ export default function Example(props) {
 
 function Item(props) {
   return (
-    <Grid container sx={{ minHeight: { xs: 200, sm: 200, md: 300 } }}>
+    <Grid container sx={{ height: { xs: 400, sm: 200, md: 300 } }}>
       <Box
         sx={{
           position: "relative",
@@ -84,7 +84,7 @@ function Item(props) {
             {props.item.name}
           </Typography>
           <Typography
-            sx={{ minHeight: { xs: 300, sm: 200, md: 100 } }}
+            sx={{ minHeight: { xs: 200, sm: 200, md: 100 } }}
             variant="body1"
             align="justify"
             gutterBottom
