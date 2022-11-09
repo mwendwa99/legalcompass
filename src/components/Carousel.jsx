@@ -67,7 +67,7 @@ export default function Example(props) {
 
 function Item(props) {
   return (
-    <Grid container>
+    <Grid container sx={{ minHeight: { xs: 200, sm: 200, md: 300 } }}>
       <Box
         sx={{
           position: "relative",
@@ -84,7 +84,7 @@ function Item(props) {
             {props.item.name}
           </Typography>
           <Typography
-            sx={{ minHeight: 200 }}
+            sx={{ minHeight: { xs: 300, sm: 200, md: 100 } }}
             variant="body1"
             align="justify"
             gutterBottom
@@ -97,7 +97,11 @@ function Item(props) {
           xs={12}
           sm={12}
           md={12}
-          style={{ position: "absolute", bottom: 0, right: 0 }}
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "flex-start",
+          }}
         >
           <CustomButton type="secondary" title="Learn More" strong={true} />
         </Grid>
