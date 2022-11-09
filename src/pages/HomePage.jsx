@@ -1,13 +1,5 @@
-import { Nav, Carousel, Banner, Button } from "../components";
-import {
-  Box,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Container,
-  Grid,
-} from "@mui/material";
+import { Nav, Carousel, Banner, Button, Partners } from "../components";
+import { Box, Typography, Grid } from "@mui/material";
 import { justice, background } from "../assets";
 
 const HomePage = () => {
@@ -17,7 +9,7 @@ const HomePage = () => {
       <img src={background} alt="background" className="background" />
       <Carousel />
       <Banner />
-      <div sx={{}}>
+      <div>
         <Grid container>
           <Grid item xs={12} sm={12} md={8} sx={{ p: { sm: 5, md: 10 } }}>
             <Typography
@@ -58,6 +50,9 @@ const HomePage = () => {
                 that can help you in your quest for justice.
               </li>
             </ol>
+            <Box sx={{ pt: 2 }}>
+              <Button title="Find A Lawyer" type={"secondary"} />
+            </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
             <img
@@ -68,6 +63,7 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </div>
+      <Partners />
     </>
   );
 };

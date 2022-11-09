@@ -50,16 +50,12 @@
 }
 @media screen and (max-width: 600px) {
   .background {
-    /* display: none; */
     height: 720px;
-    /* width: 100%; */
   }
 }
 @media screen and (min-width: 600px) {
   .background {
-    /* display: none; */
     height: 800px;
-    /* width: 100%; */
   }
 }
 
