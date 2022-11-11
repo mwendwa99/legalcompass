@@ -23,6 +23,14 @@ export const theme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#D9D9D9",
+          color: "#01244C",
+        },
+      },
+    },
   },
   palette: {
     type: "light",
@@ -43,11 +51,12 @@ export const theme = createTheme({
     background: {
       default: "#01244C",
       paper: "#01244C",
+      card: "#D9D9D9",
     },
     divider: "#726A6A",
     text: {
       primary: "rgba(255,255,255,0.87)",
-      secondary: "#ffffff",
+      secondary: "#01244C",
     },
   },
   typography: {
@@ -90,6 +99,11 @@ export const theme = createTheme({
       fontSize: 18,
       fontWeight: 500,
       lineHeight: 1.7,
+    },
+    body2: {
+      fontSize: 16,
+      fontWeight: 600,
+      lineHeight: 1.1,
     },
     button: {
       fontSize: 22,

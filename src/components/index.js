@@ -3,3 +3,5 @@ export { default as Nav } from "./Nav";
 export { default as Carousel } from "./Carousel";
 export { default as Banner } from "./Banner";
 export { default as Partners } from "./Partners";
+export { default as SeekJustice } from "./SeekJustice";
+export { default as Card } from "./Card";

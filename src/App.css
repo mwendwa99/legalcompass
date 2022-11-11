@@ -82,3 +82,7 @@
 
   color: #726a6a;
 }
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
