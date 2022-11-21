@@ -102,7 +102,7 @@ export const theme = createTheme({
     },
     body2: {
       fontSize: 16,
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.1,
     },
     button: {
