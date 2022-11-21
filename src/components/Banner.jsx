@@ -26,9 +26,8 @@ export default function Banner() {
       <Grid item xs={12} sm={12} md={6}>
         <Typography
           variant="subtitle2"
-          paragraph
+          color="text.secondary"
           sx={{
-            color: "#000",
             textAlign: { xs: "justify", sm: "justify", md: "justify" },
             p: 2,
             width: "100%",
