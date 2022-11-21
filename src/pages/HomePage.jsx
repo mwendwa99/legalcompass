@@ -10,11 +10,14 @@ import {
 } from "../components";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { background } from "../assets";
 
 const HomePage = () => {
   return (
     <>
+      <ToastContainer position="top-center" />
       <Nav />
       <img src={background} alt="background" className="background" />
       <Carousel />

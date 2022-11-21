@@ -1,15 +1,12 @@
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { toast } from "react-toastify";
 import { logoLarge } from "../assets";
 
 function Copyright(props) {
@@ -30,16 +27,23 @@ function Copyright(props) {
 }
 
 export default function Contact() {
+  const [email, setEmail] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      name: data.get("name"),
-      email: data.get("email"),
-      subject: data.get("subject"),
-      message: data.get("message"),
+      // name: data.get("name"),
+      // semail: data.get("email"),
+      // subject: data.get("subject"),
+      // message: data.get("message"),
+    });
+    setEmail(() => {
+      return data.get("email");
     });
   };
+  console.log("ewew", email);
+  const notify = () =>
+    email ? toast(`Email sent as ${email}`) : toast("No email input");
 
   return (
     <Grid container sx={{ p: 2 }} className="contact">
@@ -108,6 +112,7 @@ export default function Contact() {
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
+                  onClick={notify}
                 >
                   Submit
                 </Button>
