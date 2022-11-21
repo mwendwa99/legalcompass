@@ -6,3 +6,4 @@ export { default as Partners } from "./Partners";
 export { default as SeekJustice } from "./SeekJustice";
 export { default as Card } from "./Card";
 export { default as Statistics } from "./Statistics";
+export { default as Contact } from "./Contact";

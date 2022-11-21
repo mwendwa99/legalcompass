@@ -6,6 +6,7 @@ import {
   Partners,
   Card,
   Statistics,
+  Contact,
 } from "../components";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -42,6 +43,7 @@ const HomePage = () => {
         </Grid>
       </Grid>
       <Statistics />
+      <Contact />
     </>
   );
 };
