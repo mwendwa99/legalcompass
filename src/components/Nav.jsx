@@ -13,7 +13,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Link, Tooltip } from "@mui/material";
+import { Tooltip, Link } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 import { logo, icon } from "../assets";
 import CustomButton from "./Button";
@@ -26,6 +27,21 @@ const navItems = [
   "Resources",
   "Get Directions",
 ];
+
+// remove all spaces from a given string and return the resulting string in small caps:
+function cleanLinks(str) {
+  // Check if the string is empty
+  if (!str) return "";
+
+  // Replace all spaces in the string with an empty string
+  const strWithoutSpaces = str.replace(/\s/g, "");
+
+  // Convert the string to lowercase
+  const strInSmallCaps = strWithoutSpaces.toLowerCase();
+
+  // Return the string in small caps
+  return strInSmallCaps;
+}
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -44,9 +60,11 @@ function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+            <NavLink to={item}>
+              <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </NavLink>
           </ListItem>
         ))}
       </List>
@@ -88,7 +106,9 @@ function DrawerAppBar(props) {
                 }}
               >
                 <ListItem>
-                  <Typography variant="h5">{item}</Typography>
+                  <NavLink to={cleanLinks(item)}>
+                    <Typography variant="h5">{item}</Typography>
+                  </NavLink>
                 </ListItem>
               </Link>
             ))}

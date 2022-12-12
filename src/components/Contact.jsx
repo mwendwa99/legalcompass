@@ -83,7 +83,6 @@ export default function Contact() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
-                  autoFocus
                   variant="standard"
                   inputProps={{ style: { color: "#01244c" } }}
                 />
