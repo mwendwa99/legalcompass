@@ -115,3 +115,6 @@ a {
 .MuiTextField-root {
   color: red;
 }
+.MuiTabs-root .MuiTabs-vertical {
+  width: 300 !important;
+}

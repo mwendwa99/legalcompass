@@ -31,6 +31,22 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#D9D9D9",
+          color: "#01244C",
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#D9D9D9",
+          color: "#01244C",
+        },
+      },
+    },
   },
   palette: {
     type: "light",

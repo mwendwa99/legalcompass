@@ -31,12 +31,6 @@ export default function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      // name: data.get("name"),
-      // semail: data.get("email"),
-      // subject: data.get("subject"),
-      // message: data.get("message"),
-    });
     setEmail(() => {
       return data.get("email");
     });

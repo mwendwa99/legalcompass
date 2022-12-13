@@ -1,9 +1,9 @@
-import { RoadMap } from "../components";
+import { Stepper } from "../components";
 
 const GetDirection = () => {
   return (
     <>
-      <RoadMap />
+      <Stepper />
     </>
   );
 };

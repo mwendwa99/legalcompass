@@ -7,4 +7,4 @@ export { default as SeekJustice } from "./SeekJustice";
 export { default as Card } from "./Card";
 export { default as Statistics } from "./Statistics";
 export { default as Contact } from "./Contact";
-export { default as RoadMap } from "./RoadMap";
+export { default as Stepper } from "./Stepper";
