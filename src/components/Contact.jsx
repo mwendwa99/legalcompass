@@ -41,7 +41,6 @@ export default function Contact() {
       return data.get("email");
     });
   };
-  console.log("ewew", email);
   const notify = () =>
     email ? toast(`Email sent as ${email}`) : toast("No email input");
 

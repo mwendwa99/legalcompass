@@ -60,7 +60,10 @@ function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <NavLink to={item}>
+            <NavLink
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to={cleanLinks(item)}
+            >
               <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item} />
               </ListItemButton>
@@ -89,9 +92,14 @@ function DrawerAppBar(props) {
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
             <Tooltip title="Home">
-              <IconButton sx={{ p: 0 }}>
-                <img src={logo} alt="logo" height="100%" width="100%" />
-              </IconButton>
+              <NavLink
+                to={"/home"}
+                style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                <IconButton sx={{ p: 0 }}>
+                  <img src={logo} alt="logo" height="100%" width="100%" />
+                </IconButton>
+              </NavLink>
             </Tooltip>
           </Box>
           <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
@@ -102,11 +110,14 @@ function DrawerAppBar(props) {
                 component="button"
                 variant="body2"
                 onClick={() => {
-                  console.info("I'm a button.");
+                  // console.info("I'm a button.");
                 }}
               >
                 <ListItem>
-                  <NavLink to={cleanLinks(item)}>
+                  <NavLink
+                    to={cleanLinks(item)}
+                    style={{ color: "inherit", textDecoration: "inherit" }}
+                  >
                     <Typography variant="h5">{item}</Typography>
                   </NavLink>
                 </ListItem>
@@ -136,6 +147,8 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
+      {/* add box with margin to fit nav component */}
+      <Box sx={{ flexGrow: 1, mt: 10 }} />
     </Box>
   );
 }

@@ -9,6 +9,18 @@
   align-items: center;
   flex-direction: column;
 }
+a {
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+  color: white;
+}
 .MuiLink-root {
   position: relative;
   color: #484848;
@@ -36,6 +48,12 @@
 .MuiLink-root::before {
   transition: width 0.35s;
 }
+
+/* if navlink is active set color to red */
+.MuiLink-root.Mui-selected {
+  color: #d9d9d9;
+}
+
 @media screen and (max-width: 600px) {
   .carouselBtn {
     display: none;

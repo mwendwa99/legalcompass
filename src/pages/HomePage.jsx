@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <>
       <ToastContainer position="top-center" />
-      <Nav />
+      {/* <Nav /> */}
       <img src={background} alt="background" className="background" />
       <Carousel />
       <Banner />
