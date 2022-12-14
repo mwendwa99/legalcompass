@@ -62,7 +62,7 @@ function DrawerAppBar(props) {
           <ListItem key={item} disablePadding>
             <NavLink
               style={{ color: "inherit", textDecoration: "inherit" }}
-              to={cleanLinks(item)}
+              to={cleanLinks(item) === "home" ? "/" : cleanLinks(item)}
             >
               <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item} />
