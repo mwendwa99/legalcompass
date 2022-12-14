@@ -118,3 +118,12 @@ a {
 .MuiTabs-root .MuiTabs-vertical {
   width: 300 !important;
 }
+.MuiStepLabel-label {
+  color: #05254b;
+}
+.Mui-active {
+  color: #05254b !important;
+}
+.Mui-completed {
+  color: #05254b !important;
+}

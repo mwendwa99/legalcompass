@@ -47,6 +47,13 @@ export const theme = createTheme({
         },
       },
     },
+    MuiStepLabel: {
+      styleOverrides: {
+        root: {
+          color: "#01244C",
+        },
+      },
+    },
   },
   palette: {
     type: "light",

@@ -10,18 +10,34 @@ import Typography from "@mui/material/Typography";
 
 const steps = [
   {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: "Step 1 in the corridors of justice process",
+    description: `For an unprejudiced and fair trial, the accused must be
+              given a fair chance to defend himself. The accused must be
+              informed of the charges against him and must be given a
+              reasonable time and facilities to prepare his defence.
+              The accused must be given the opportunity to confront and
+              cross-examine the witnesses against him. The accused must be
+              given the opportunity to present his defence witnesses and
+              evidence. The accused must be given the opportunity to
+              present his defence witnesses and evidence. The accused must
+              be given the opportunity to present his defence witnesses and
+              evidence.`,
   },
   {
-    label: "Create an ad group",
-    description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
+    label: "Step 2 in the corridors of justice process",
+    description: `An unprejudiced jury must be impaneled to try the accused. The jury
+              must be selected at random from a fair cross-section of the
+              community. The jury must be given clear and simple instructions
+              on the law and the evidence. The jury must be given sufficient
+              time to consider the evidence and reach a verdict. The jury must
+              be sequestered during the trial. The jury must be given the
+              opportunity to reach a unanimous verdict. The jury must be
+              given the opportunity to reach a unanimous verdict. The jury
+              must be given the opportunity to reach a unanimous verdict.
+              `,
   },
   {
-    label: "Create an ad",
+    label: "Step 3 in the corridors of justice process",
     description: `Try out different ad text to see what brings in the most customers,
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
@@ -45,17 +61,16 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <Paper elevation={3} sx={{ maxWidth: 500, background: "#d9d9d9", p: 2 }}>
+    <Paper elevation={3} sx={{ width: 500, background: "#d9d9d9", p: 2 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
-          <Step key={step.label} sx={{ color: "black" }}>
+          <Step key={step.label}>
             <StepLabel
               optional={
                 index === 2 ? (
                   <Typography variant="caption">Last step</Typography>
                 ) : null
               }
-              sx={{ color: "black" }}
             >
               {step.label}
             </StepLabel>
@@ -74,7 +89,7 @@ export default function VerticalLinearStepper() {
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
-                    sx={{ mt: 1, mr: 1 }}
+                    sx={{ mt: 1, mr: 1, color: "primary" }}
                   >
                     Back
                   </Button>
@@ -93,7 +108,7 @@ export default function VerticalLinearStepper() {
             onClick={handleReset}
             sx={{ mt: 1, mr: 1 }}
           >
-            Reset
+            Back to Step 1
           </Button>
         </Paper>
       )}
