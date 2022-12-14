@@ -28,7 +28,7 @@ export default function NotFound() {
           <Grid item xs={6}>
             <Typography variant="h1">404</Typography>
             <Typography variant="h6">
-              Sorry! the page you’re looking for doesn’t exist or is in
+              Sorry! The page you’re looking for doesn’t exist or is in
               development. Come back to check it out later. Thank you!
             </Typography>
             <Button
