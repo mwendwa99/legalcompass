@@ -15,7 +15,7 @@ function App() {
       <CssBaseline />
       <Nav />
       <Routes>
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/getdirections" element={<GetDirection />} />
         <Route path="*" element={<h1>404: Not Found</h1>} />
       </Routes>

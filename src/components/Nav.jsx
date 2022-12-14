@@ -93,7 +93,7 @@ function DrawerAppBar(props) {
           <Box sx={{ flexGrow: 1 }}>
             <Tooltip title="Home">
               <NavLink
-                to={"/home"}
+                to={"/"}
                 style={{ color: "inherit", textDecoration: "inherit" }}
               >
                 <IconButton sx={{ p: 0 }}>
