@@ -153,7 +153,7 @@ export default function VerticalLinearStepper() {
               {step.label}
             </StepLabel>
             <StepContent>
-              <Stack direction={"horizontal"}>
+              <Stack direction="row">
                 <Typography color={"primary"} align="justify">
                   {step.description}
                 </Typography>
