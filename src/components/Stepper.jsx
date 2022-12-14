@@ -61,7 +61,10 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <Paper elevation={3} sx={{ width: 500, background: "#d9d9d9", p: 2 }}>
+    <Paper
+      elevation={3}
+      sx={{ width: { xs: "100%", sm: "70%" }, background: "#d9d9d9", p: 2 }}
+    >
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>

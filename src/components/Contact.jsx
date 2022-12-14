@@ -65,7 +65,6 @@ export default function Contact() {
                   id="name"
                   label="Name"
                   name="name"
-                  autoFocus
                   variant="standard"
                   inputProps={{ style: { color: "#01244c" } }}
                 />

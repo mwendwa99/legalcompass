@@ -11,3 +11,4 @@ export { default as rightArrow } from "./right-arrow.png";
 export { default as leftArrow } from "./left-arrow.png";
 export { default as cardImage } from "./card-image.png";
 export { default as logoLarge } from "./logoLarge.png";
+export { default as notfound } from "./notfound.json";

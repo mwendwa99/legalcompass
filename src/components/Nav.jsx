@@ -103,7 +103,7 @@ function DrawerAppBar(props) {
             </Tooltip>
           </Box>
           <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <Link
                 key={item}
                 style={{ color: "#fff" }}
@@ -115,7 +115,7 @@ function DrawerAppBar(props) {
               >
                 <ListItem>
                   <NavLink
-                    to={cleanLinks(item)}
+                    to={index === 0 ? "/" : cleanLinks(item)}
                     style={{ color: "inherit", textDecoration: "inherit" }}
                   >
                     <Typography variant="h5">{item}</Typography>

@@ -3,10 +3,11 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./App.css";
 // components
-import { Nav } from "./components";
+import { Nav, Contact } from "./components";
 // pages
 import HomePage from "./pages/HomePage";
 import GetDirection from "./pages/GetDirection";
+import NotFound from "./pages/NotFound";
 import { theme } from "./Theme";
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/getdirections" element={<GetDirection />} />
-        <Route path="*" element={<h1>404: Not Found</h1>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
+      <Contact />
     </ThemeProvider>
   );
 }
