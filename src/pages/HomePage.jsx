@@ -1,5 +1,4 @@
 import {
-  Nav,
   Carousel,
   Banner,
   SeekJustice,
@@ -13,14 +12,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { background } from "../assets";
 
+const banner = {
+  title: "united in vision & mission",
+  description: `We are a non-profit organization that promotes public understanding of Kenya's legal and judicial systems.
+   We provide free legal advice and help through the courts. We want Kenyans to know where they can go to obtain justice.`,
+  button: "Get Involved",
+  divider: true,
+};
+
 const HomePage = () => {
   return (
     <>
       <ToastContainer position="top-center" />
-      {/* <Nav /> */}
       <img src={background} alt="background" className="background" />
       <Carousel />
-      <Banner />
+      <Banner banner={banner} />
       <SeekJustice />
       <Partners />
       <Grid container className="card-container">
