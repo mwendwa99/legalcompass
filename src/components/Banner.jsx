@@ -9,7 +9,7 @@ import CustomButton from "./Button";
 export default function Banner({ banner }) {
   return (
     <Fade in={true} timeout={1000}>
-      <Grid container sx={{ p: 2, mt: "5rem" }} className="banner">
+      <Grid container sx={{ p: 2, mt: "2rem", mb: "2rem" }} className="banner">
         <Grid item xs={12} sm={12} md={4}>
           <Typography
             align="center"

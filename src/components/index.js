@@ -8,3 +8,4 @@ export { default as Card } from "./Card";
 export { default as Statistics } from "./Statistics";
 export { default as Contact } from "./Contact";
 export { default as Stepper } from "./Stepper";
+export { default as BreadCrumbs } from "./BreadCrumbs";
