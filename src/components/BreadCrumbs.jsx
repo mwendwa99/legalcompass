@@ -2,9 +2,13 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
-import HomeIcon from "@mui/icons-material/Home";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
-import GrainIcon from "@mui/icons-material/Grain";
+import {
+  Event,
+  Whatshot,
+  Home,
+  FolderSpecial,
+  Directions,
+} from "@mui/icons-material";
 import { NavLink, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 
@@ -15,7 +19,31 @@ function handleClick(event) {
 
 export default function IconBreadcrumbs() {
   const currentLocation = useLocation();
-  // console.log(currentLocation);
+
+  // map current location to breadcrumb and icon
+  const breadcrumbMap = {
+    "/": {
+      breadcrumb: "Home",
+      icon: <Home sx={{ mr: 0.5 }} fontSize="inherit" />,
+    },
+    "/whoweare": {
+      breadcrumb: "Who we are",
+      icon: <Whatshot sx={{ mr: 0.5 }} fontSize="inherit" />,
+    },
+    "/trainings&events": {
+      breadcrumb: "Trainings & Events",
+      icon: <Event sx={{ mr: 0.5 }} fontSize="inherit" />,
+    },
+    "/resources": {
+      breadcrumb: "Resources",
+      icon: <FolderSpecial sx={{ mr: 0.5 }} fontSize="inherit" />,
+    },
+    "/getdirections": {
+      breadcrumb: "Get Directions",
+      icon: <Directions sx={{ mr: 0.5 }} fontSize="inherit" />,
+    },
+  };
+
   return (
     <Box
       style={{
@@ -34,7 +62,7 @@ export default function IconBreadcrumbs() {
             component={NavLink}
             to="/"
           >
-            <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            <Home sx={{ mr: 0.5 }} fontSize="inherit" />
             Home
           </Link>
           <Link
@@ -43,8 +71,9 @@ export default function IconBreadcrumbs() {
             component={NavLink}
             to={currentLocation.pathname}
           >
-            <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-            Who We Are
+            {/* get icon and name from breadcrumbMap */}
+            {breadcrumbMap[currentLocation.pathname].icon}
+            {breadcrumbMap[currentLocation.pathname].breadcrumb}
           </Link>
         </Breadcrumbs>
       </Box>

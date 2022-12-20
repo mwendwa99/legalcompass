@@ -7,7 +7,7 @@ import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import { Divider, Stack } from "@mui/material";
+import { Container, Divider, Stack } from "@mui/material";
 
 const steps = [
   {
@@ -136,86 +136,95 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <Paper
-      elevation={3}
-      sx={{ width: { xs: "100%", sm: "70%" }, background: "#d9d9d9", p: 2 }}
+    <Container
+      maxWidth="xl"
+      sx={{ display: "flex", justifyContent: "center", mt: 2 }}
     >
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {steps.map((step, index) => (
-          <Step key={step.label}>
-            <StepLabel
-              optional={
-                index === 4 ? (
-                  <Typography variant="caption">Last step</Typography>
-                ) : null
-              }
-            >
-              {step.label}
-            </StepLabel>
-            <StepContent>
-              <Stack direction="row">
-                <Typography color={"primary"} align="justify">
-                  {step.description}
-                </Typography>
-                <Divider sx={{ p: 1, m: 1 }} orientation="vertical" flexItem />
-                <Box sx={{ mb: 2 }}>
-                  <Typography sx={{ fontStyle: "italic" }} color={"primary"}>
-                    {step.question}
+      <Paper
+        elevation={3}
+        sx={{ width: { xs: "100%", sm: "70%" }, background: "#d9d9d9", p: 2 }}
+      >
+        <Stepper activeStep={activeStep} orientation="vertical">
+          {steps.map((step, index) => (
+            <Step key={step.label}>
+              <StepLabel
+                optional={
+                  index === 4 ? (
+                    <Typography variant="caption">Last step</Typography>
+                  ) : null
+                }
+              >
+                {step.label}
+              </StepLabel>
+              <StepContent>
+                <Stack direction="row">
+                  <Typography color={"primary"} align="justify">
+                    {step.description}
                   </Typography>
-                  <Button
-                    variant="text"
-                    onClick={() => handleNext(step.nextPathId)}
-                    sx={{ mt: 1, mr: 1 }}
-                    color="primary"
-                  >
-                    Yes
-                  </Button>
-                  <Button
-                    disabled={index === 0}
-                    onClick={() => handleBack(step.prevPathId)}
-                    sx={{ mt: 1, mr: 1, color: "primary" }}
-                  >
-                    No
-                  </Button>
-                </Box>
-              </Stack>
+                  <Divider
+                    sx={{ p: 1, m: 1 }}
+                    orientation="vertical"
+                    flexItem
+                  />
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontStyle: "italic" }} color={"primary"}>
+                      {step.question}
+                    </Typography>
+                    <Button
+                      variant="text"
+                      onClick={() => handleNext(step.nextPathId)}
+                      sx={{ mt: 1, mr: 1 }}
+                      color="primary"
+                    >
+                      Yes
+                    </Button>
+                    <Button
+                      disabled={index === 0}
+                      onClick={() => handleBack(step.prevPathId)}
+                      sx={{ mt: 1, mr: 1, color: "primary" }}
+                    >
+                      No
+                    </Button>
+                  </Box>
+                </Stack>
 
-              <Box sx={{ mb: 2 }}>
-                <div>
-                  <Button
-                    variant="contained"
-                    onClick={handleNext}
-                    sx={{ mt: 1, mr: 1 }}
-                    color="primary"
-                  >
-                    {index === steps.length - 1 ? "Finish" : "Continue"}
-                  </Button>
-                  <Button
-                    disabled={index === 0}
-                    onClick={handleBack}
-                    sx={{ mt: 1, mr: 1, color: "primary" }}
-                  >
-                    Back
-                  </Button>
-                </div>
-              </Box>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-      {activeStep === steps.length && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
-          <Button
-            color="secondary"
-            variant="contained"
-            onClick={handleReset}
-            sx={{ mt: 1, mr: 1 }}
-          >
-            Back to Step 1
-          </Button>
-        </Paper>
-      )}
-    </Paper>
+                <Box sx={{ mb: 2 }}>
+                  <div>
+                    <Button
+                      variant="contained"
+                      onClick={handleNext}
+                      sx={{ mt: 1, mr: 1 }}
+                      color="primary"
+                    >
+                      {index === steps.length - 1 ? "Finish" : "Continue"}
+                    </Button>
+                    <Button
+                      disabled={index === 0}
+                      onClick={handleBack}
+                      sx={{ mt: 1, mr: 1, color: "primary" }}
+                    >
+                      Back
+                    </Button>
+                  </div>
+                </Box>
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+        {activeStep === steps.length && (
+          <Paper square elevation={0} sx={{ p: 3 }}>
+            <Typography>All steps completed - you&apos;re finished</Typography>
+            <Button
+              color="secondary"
+              variant="contained"
+              onClick={handleReset}
+              sx={{ mt: 1, mr: 1 }}
+            >
+              Back to Step 1
+            </Button>
+          </Paper>
+        )}
+      </Paper>
+    </Container>
   );
 }
