@@ -16,7 +16,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Nav />
-      {/* <MemoryRouter initialEntries={["/"]} initialIndex={0}> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/getdirections" element={<GetDirection />} />
@@ -24,7 +23,6 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Contact />
-      {/* </MemoryRouter> */}
     </ThemeProvider>
   );
 }

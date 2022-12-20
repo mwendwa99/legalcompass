@@ -9,7 +9,16 @@ import CustomButton from "./Button";
 export default function Banner({ banner }) {
   return (
     <Fade in={true} timeout={1000}>
-      <Grid container sx={{ p: 2, mt: "2rem", mb: "2rem" }} className="banner">
+      <Grid
+        container
+        sx={{
+          p: 2,
+          m: 2,
+          position: "relative",
+          height: { xs: "100%", sm: 400, md: 300 },
+        }}
+        className="banner"
+      >
         <Grid item xs={12} sm={12} md={4}>
           <Typography
             align="center"
@@ -25,6 +34,7 @@ export default function Banner({ banner }) {
           variant="middle"
           flexItem={banner.divider}
           orientation="vertical"
+          sx={{ display: { xs: "none", sm: "none", md: "block" } }}
         />
         <Grid item xs={12} sm={12} md={6}>
           <Typography

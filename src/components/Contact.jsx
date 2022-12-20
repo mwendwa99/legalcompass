@@ -27,6 +27,22 @@ function Copyright(props) {
   );
 }
 
+function Credit() {
+  return (
+    <Typography variant="body2" color="text.primary" align="center">
+      {"Site by "}
+      <Link
+        color="inherit"
+        href="https://www.linkedin.com/in/brian-mwendwa-25326a173/"
+        target={"_blank"}
+        sx={{ fontSize: 14 }}
+      >
+        {"Brian Mwendwa"}
+      </Link>
+    </Typography>
+  );
+}
+
 export default function Contact() {
   const [email, setEmail] = useState("");
   const handleSubmit = (event) => {
@@ -144,7 +160,18 @@ export default function Contact() {
             />
           </Box>
         </Grid>
-        <Copyright sx={{ mt: 2, mb: 2 }} />
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Copyright sx={{ mt: 2, mb: 2 }} />
+          <Credit />
+        </Box>
       </Grid>
     </Fade>
   );

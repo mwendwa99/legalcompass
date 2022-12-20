@@ -20,7 +20,7 @@ export default function WhoWeAre() {
     <Box sx={{ p: 2 }}>
       <BreadCrumbs />
       <Container maxWidth="xl" sx={{ p: 2 }}>
-        <Grid container>
+        <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <Typography variant="h1" align="left" gutterBottom>
               About Us
@@ -50,7 +50,6 @@ export default function WhoWeAre() {
               src="https://images.pexels.com/photos/4427431/pexels-photo-4427431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="justice"
               style={{
-                paddingLeft: "10px",
                 objectFit: "cover",
                 width: "100%",
                 height: "100%",
@@ -63,7 +62,31 @@ export default function WhoWeAre() {
             xs={12}
             md={12}
           >
-            <Banner banner={banner} />
+            <Banner position={"relative"} banner={banner} />
+          </Grid>
+        </Grid>
+        <Grid container sx={{ p: 2 }} spacing={3}>
+          <Grid item xs={12} md={12}>
+            <Typography variant="h1" align="center" gutterBottom>
+              Our Mission
+            </Typography>
+            <Typography variant="h3" align="center" gutterBottom>
+              To be recognized globally for our ethics, passion, and excellence
+              in the practice of law.
+            </Typography>
+            <Typography variant="h1" align="center" gutterBottom>
+              Our Vision
+            </Typography>
+            <Typography variant="h3" align="center" gutterBottom>
+              To be the leading law firm in Kenya and the region, providing the
+              highest quality legal services to our clients.
+            </Typography>
+            <Typography variant="h1" align="center" gutterBottom>
+              Our Values
+            </Typography>
+            <Typography variant="h3" align="center" gutterBottom>
+              Excellence | Integrity | Innovation | Service
+            </Typography>
           </Grid>
         </Grid>
       </Container>
