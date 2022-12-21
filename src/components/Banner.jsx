@@ -24,10 +24,10 @@ export default function Banner({ banner }) {
             align="center"
             variant="h1"
             component="h1"
-            color="grey"
+            color="custom"
             sx={{ width: "100%", p: 2 }}
           >
-            {banner.title}
+            {banner.title}ww
           </Typography>
         </Grid>
         <Divider

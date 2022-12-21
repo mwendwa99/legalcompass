@@ -1,6 +1,4 @@
-import { Routes, Route, MemoryRouter } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 // components
 import { Nav, Contact } from "./components";
@@ -15,8 +13,7 @@ import { theme } from "./Theme";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -27,7 +24,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Contact />
-    </ThemeProvider>
+    </>
   );
 }
 

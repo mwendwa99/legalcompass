@@ -17,7 +17,7 @@ export default function WhoWeAre() {
     setOpen((prevOpen) => !prevOpen);
   };
   return (
-    <Box sx={{ p: 2 }}>
+    <Box>
       <BreadCrumbs />
       <Container maxWidth="xl" sx={{ p: 2 }}>
         <Grid container spacing={2}>

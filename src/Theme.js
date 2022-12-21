@@ -65,10 +65,10 @@ export const theme = createTheme({
     secondary: {
       main: "#EABD09",
     },
-    grey: {
-      // light: '#ffa726',
-      main: "#726A6A",
-      // dark: '#ef6c00',
+    custom: {
+      light: "#ffa726",
+      main: "#ffa726",
+      dark: "#ef6c00",
       contrastText: "rgba(0, 0, 0, 0.87)",
     },
     background: {
@@ -81,6 +81,13 @@ export const theme = createTheme({
       primary: "rgba(255,255,255,0.87)",
       secondary: "#01244C",
     },
+    // Used by `getContrastText()` to maximize the contrast between
+    // the background and the text.
+    contrastThreshold: 3,
+    // Used by the functions below to shift a color's luminance by approximately
+    // two indexes within its tonal palette.
+    // E.g., shift from Red 500 to Red 300 or Red 700.
+    tonalOffset: 0.2,
   },
   typography: {
     fontFamily: ' "lato",sans-serif',
