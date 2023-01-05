@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Box, Grid, Typography } from "@mui/material";
+import { Container, Box, Grid, Typography, Fade } from "@mui/material";
 import { BreadCrumbs, Banner } from "../components";
 
 const banner = {
@@ -46,15 +46,17 @@ export default function WhoWeAre() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            <img
-              src="https://images.pexels.com/photos/4427431/pexels-photo-4427431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="justice"
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-              }}
-            />
+            <Fade in={true} timeout={1000}>
+              <img
+                src="https://images.pexels.com/photos/4427431/pexels-photo-4427431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="justice"
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </Fade>
           </Grid>
           <Grid
             sx={{ display: "flex", justifyContent: "center" }}

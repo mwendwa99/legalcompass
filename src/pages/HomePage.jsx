@@ -8,6 +8,7 @@ import {
 } from "../components";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Fade from "@mui/material/Fade";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { background } from "../assets";
@@ -24,7 +25,9 @@ const HomePage = () => {
   return (
     <>
       <ToastContainer position="top-center" />
-      <img src={background} alt="background" className="background" />
+      <Fade in={true} timeout={1000}>
+        <img src={background} alt="background" className="background" />
+      </Fade>
       <Carousel />
       <Banner banner={banner} />
       <SeekJustice />

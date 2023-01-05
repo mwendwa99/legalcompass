@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Fade } from "@mui/material";
 import Button from "./Button";
 import { justice } from "../assets";
 
@@ -50,11 +50,13 @@ export default function SeekJustice() {
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
-          <img
-            src={justice}
-            style={{ width: "100%", height: "100%" }}
-            alt="justice"
-          />
+          <Fade in={true} timeout={1000}>
+            <img
+              src={justice}
+              style={{ width: "100%", height: "100%" }}
+              alt="justice"
+            />
+          </Fade>
         </Grid>
       </Grid>
     </div>
