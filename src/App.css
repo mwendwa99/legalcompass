@@ -140,3 +140,13 @@ a {
   background-color: rgba(200, 100, 0, 0.5);
   background-blend-mode: multiply;
 }
+.MuiCardMedia-img {
+  /* max-width: 100% !important;
+  width: 300px !important;
+  height: 100% !important; */
+  /* define fixed height and width */
+  width: 100%;
+  height: 100%;
+  /* scale image to fill container */
+  object-fit: cover;
+}

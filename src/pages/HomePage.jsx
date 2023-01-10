@@ -26,7 +26,13 @@ const HomePage = () => {
     <>
       <ToastContainer position="top-center" />
       <Fade in={true} timeout={1000}>
-        <img src={background} alt="background" className="background" />
+        <img
+          src={background}
+          height="720px"
+          width="1280px"
+          alt="background"
+          className="background"
+        />
       </Fade>
       <Carousel />
       <Banner banner={banner} />

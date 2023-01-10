@@ -27,7 +27,7 @@ export default function Banner({ banner }) {
             color="custom"
             sx={{ width: "100%", p: 2 }}
           >
-            {banner.title}ww
+            {banner.title}
           </Typography>
         </Grid>
         <Divider

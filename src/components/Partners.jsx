@@ -20,28 +20,28 @@ const Partners = () => {
           <img
             src={partner}
             alt="partner"
-            style={{ width: "100%", height: "100%" }}
+            style={{ maxWidth: "100%", width: "300px", height: "100%" }}
           />
         </Grid>
         <Grid item xs={3} sm={3} md={3}>
           <img
             src={partner}
             alt="partner"
-            style={{ width: "100%", height: "100%" }}
+            style={{ maxWidth: "100%", width: "300px", height: "100%" }}
           />
         </Grid>
         <Grid item xs={3} sm={3} md={3}>
           <img
             src={partner}
             alt="partner"
-            style={{ width: "100%", height: "100%" }}
+            style={{ maxWidth: "100%", width: "300px", height: "100%" }}
           />
         </Grid>
         <Grid item xs={3} sm={3} md={3}>
           <img
             src={partner}
             alt="partner"
-            style={{ width: "100%", height: "100%" }}
+            style={{ maxWidth: "100%", width: "300px", height: "100%" }}
           />
         </Grid>
       </Grid>

@@ -53,7 +53,12 @@ export default function SeekJustice() {
           <Fade in={true} timeout={1000}>
             <img
               src={justice}
-              style={{ width: "100%", height: "100%" }}
+              style={{
+                width: "100%",
+                height: "550px",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
               alt="justice"
             />
           </Fade>
