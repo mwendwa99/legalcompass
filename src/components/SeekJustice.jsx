@@ -54,10 +54,9 @@ export default function SeekJustice() {
             <img
               src={justice}
               style={{
-                width: "100%",
-                height: "550px",
-                objectFit: "cover",
-                objectPosition: "center",
+                maxWidth: "100%",
+                width: "500px",
+                height: "100%",
               }}
               alt="justice"
             />

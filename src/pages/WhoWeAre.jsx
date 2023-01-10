@@ -51,8 +51,8 @@ export default function WhoWeAre() {
                 src="https://images.pexels.com/photos/4427431/pexels-photo-4427431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="justice"
                 style={{
-                  objectFit: "cover",
-                  width: "100%",
+                  maxWidth: "100%",
+                  width: "700px",
                   height: "100%",
                 }}
               />
