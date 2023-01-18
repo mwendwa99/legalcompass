@@ -8,7 +8,7 @@ import CustomButton from "./Button";
 
 export default function Banner({ banner }) {
   return (
-    <Fade in={true} timeout={1000}>
+    <Fade role={"banner"} in={true} timeout={1000}>
       <Grid
         container
         sx={{

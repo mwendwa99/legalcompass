@@ -46,6 +46,7 @@ export default function IconBreadcrumbs() {
 
   return (
     <Box
+      role="breadcrumb"
       style={{
         backgroundImage: `url("https://images.pexels.com/photos/6077381/pexels-photo-6077381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`,
         backgroundSize: "cover",
