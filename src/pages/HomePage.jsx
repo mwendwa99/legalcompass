@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import Fade from "@mui/material/Fade";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { background } from "../assets";
+import { background, cardImage } from "../assets";
 
 const banner = {
   title: "united in vision & mission",
@@ -19,6 +19,13 @@ const banner = {
    We provide free legal advice and help through the courts. We want Kenyans to know where they can go to obtain justice.`,
   button: "Get Involved",
   divider: true,
+};
+
+const cardContent = {
+  title: "Referral Organisations",
+  description: `There are a several organisations that help people handle particular elements of legal action. Some provide direct legal representation, others advice on various areas, others cater to particular demographics.`,
+  button: "Learn More",
+  image: cardImage,
 };
 
 const HomePage = () => {
@@ -50,13 +57,13 @@ const HomePage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card />
+          <Card content={cardContent} />
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card />
+          <Card content={cardContent} />
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card />
+          <Card content={cardContent} />
         </Grid>
       </Grid>
       <Statistics />
