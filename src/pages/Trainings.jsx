@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import { background } from "../assets";
+import { useSelector, useDispatch } from "react-redux";
 
 const cardContent = {
   title: "Name of Event",
@@ -13,6 +14,10 @@ const cardContent = {
 };
 
 export default function Trainings() {
+  const events = useSelector((state) => state.events);
+  const dispatch = useDispatch();
+
+  console.log("events", events);
   return (
     <div>
       <BreadCrumbs />
@@ -20,23 +25,20 @@ export default function Trainings() {
         <Grid container>
           <Grid item xs={12} md={6}>
             <Paper elevation={3}>
-              <Calendar date={cardContent.date} />
+              <Calendar events={events} />
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Grid container sx={{ overflow: "auto" }}>
-              <Grid item xs={12} md={6}>
-                <Card content={cardContent} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Card content={cardContent} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Card content={cardContent} />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Card content={cardContent} />
-              </Grid>
+            <Grid container>
+              {
+                // This is a conditional rendering of the card
+                events.length > 0 &&
+                  events.map((event) => (
+                    <Grid item xs={12} md={6}>
+                      <Card content={event} />
+                    </Grid>
+                  ))
+              }
             </Grid>
           </Grid>
         </Grid>

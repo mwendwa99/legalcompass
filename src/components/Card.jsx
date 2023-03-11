@@ -11,7 +11,12 @@ export default function MediaCard({ content }) {
   return (
     <Box sx={{ m: 1 }}>
       <Card>
-        <CardMedia component="img" image={content.image} alt="green iguana" />
+        <CardMedia
+          component="img"
+          src={content.image}
+          alt={content.title}
+          sx={{ height: "100px", objectFit: "cover" }}
+        />
         <CardContent>
           <Typography
             gutterBottom
@@ -22,7 +27,7 @@ export default function MediaCard({ content }) {
             {content.title}
           </Typography>
           <Typography variant="body2" color="text.secondary" gutterBottom>
-            {content.description}
+            {content.content}
           </Typography>
           {
             // This is a conditional rendering of the date
@@ -34,7 +39,11 @@ export default function MediaCard({ content }) {
           }
         </CardContent>
         <CardActions>
-          <CustomButton type="secondary" title={content.button} />
+          <CustomButton
+            type="secondary"
+            title={"Register"}
+            action={() => alert(content.id)}
+          />
         </CardActions>
       </Card>
     </Box>
